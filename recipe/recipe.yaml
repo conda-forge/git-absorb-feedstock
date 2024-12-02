@@ -1,0 +1,37 @@
+context:
+  version: 0.6.16
+
+package:
+  name: git-absorb
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tummychow/git-absorb/archive/${{ version }}.tar.gz
+  sha256: d0fac448801674a4d4d5d42d6ef2d2e21545ad66755023c531a273a47893a573
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - git-absorb --help
+
+about:
+  license: BSD-3-Clause
+  license_file:
+    - LICENSE.md
+    - THIRDPARTY.yml
+  summary: Automatic git commit --fixup
+  homepage: https://github.com/tummychow/git-absorb
+  repository: https://github.com/tummychow/git-absorb
+
+extra:
+  recipe-maintainers:
+    - danielnachun
