@@ -1,5 +1,5 @@
 context:
-  version: "0.6.17"
+  version: "0.7.0"
 
 package:
   name: git-absorb
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tummychow/git-absorb/archive/${{ version }}.tar.gz
-  sha256: 512ef2bf0e642f8c34eb56aad657413bd9e04595e3bc4650ecf1c0799f148ca4
+  sha256: 65f5b80bcb726a0c40eeda94ccb47fce7f3fc4ed16021465196a37b907083eb8
 
 build:
   number: 0
